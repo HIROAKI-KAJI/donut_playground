@@ -1,0 +1,21 @@
+# config/cord_donut-base.yaml
+
+pretrained_model_name_or_path: "naver-clova-ix/donut-base"
+dataset_name_or_paths:
+  - "./dataset/cord"  # ← CORDデータのあるパスに変更
+task_start_tokens:
+  - "<s_cord-v2>"
+max_length: 768
+
+# optimization
+max_epochs: 5
+max_steps: -1  # 無制限
+val_check_interval: 1.0
+check_val_every_n_epoch: 1
+gradient_clip_val: 1.0
+seed: 42
+sort_json_key: True
+
+# logging / checkpoint
+result_path: "./result"
+exp_name: "cord_donut-base"

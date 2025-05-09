@@ -1,0 +1,9 @@
+torch>=1.10.0
+transformers>=4.21.0
+datasets
+sentencepiece
+accelerate
+scikit-learn
+opencv-python
+python-Levenshtein
+
