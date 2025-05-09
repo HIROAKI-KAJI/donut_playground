@@ -14,3 +14,8 @@ githubの公式リポジトリをクローンして、試してみたやつ。
             ├── receipt_0501.jpg
             ├── receipt_0501.json
             └── ...
+
+
+###　学習用コピペ
+
+    　python train.py --config config/train_donut-base.yaml

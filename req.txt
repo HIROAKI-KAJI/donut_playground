@@ -6,4 +6,9 @@ accelerate
 scikit-learn
 opencv-python
 python-Levenshtein
-
+pytorch-lightning
+sconf
+pillow
+timm
+zss
+nltk

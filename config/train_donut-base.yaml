@@ -18,4 +18,4 @@ sort_json_key: True
 
 # logging / checkpoint
 result_path: "./result"
-exp_name: "cord_donut-base"
+exp_name: "train_donut-base.yaml"
