@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"AOP Seafood\", \"cnt\": \"1\", \"price\": \"85,000\"}, {\"nm\": \"Omurice Katsu Curry\", \"cnt\": \"1\", \"price\": \"95,000\"}, {\"nm\": \"Earl Gray Tea\", \"cnt\": \"1\", \"price\": \"35,000\"}, {\"nm\": \"Hot Tea\", \"cnt\": \"1\", \"price\": \"25,000\"}]</s_menu> <s_sub_total_subtotal_price>240,000</s_sub_total_subtotal_price> <s_sub_total_service_price>21,600</s_sub_total_service_price> <s_sub_total_tax_price>26,160</s_sub_total_tax_price> <s_total_total_price>287,760</s_total_total_price>"
+}

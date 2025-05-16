@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu_nm>ROASTED MT ( R )</s_menu_nm> <s_menu_cnt>1</s_menu_cnt> <s_menu_price>21,000</s_menu_price> <s_menu_sub>[{\"nm\": \"GRASS JELLY ( R )\", \"price\": \"4,000\"}, {\"nm\": \"ICE NO\", \"price\": \"0\"}, {\"nm\": \"SUGAR HALF\", \"price\": \"0\"}]</s_menu_sub> <s_sub_total_subtotal_price>25,000</s_sub_total_subtotal_price> <s_sub_total_discount_price>-2,500</s_sub_total_discount_price> <s_total_total_price>22,500</s_total_total_price> <s_total_total_etc>4,500</s_total_total_etc> <s_total_emoneyprice>18,000</s_total_emoneyprice> <s_total_menuqty_cnt>1</s_total_menuqty_cnt>"
+}

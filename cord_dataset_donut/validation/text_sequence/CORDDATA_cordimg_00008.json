@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"TALAM UNGU\", \"unitprice\": \"@6500\", \"cnt\": \"3X\", \"discountprice\": \"-7,800\", \"price\": \"19,500\"}, {\"nm\": \"MIKA KECIL\", \"unitprice\": \"@0\", \"cnt\": \"1X\", \"price\": \"0\"}]</s_menu> <s_sub_total_subtotal_price>11,700</s_sub_total_subtotal_price> <s_total_total_price>11,700</s_total_total_price> <s_total_cashprice>20,000</s_total_cashprice> <s_total_changeprice>8,300</s_total_changeprice> <s_total_menuqty_cnt>4.00xITEMs</s_total_menuqty_cnt>"
+}

@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"ISI CAMPUR\", \"unitprice\": \"43.636\", \"cnt\": \"1\", \"price\": \"43.636\"}, {\"nm\": \"AQUA BOTOL\", \"unitprice\": \"9.000\", \"cnt\": \"1\", \"price\": \"9.000\"}]</s_menu> <s_sub_total_subtotal_price>52.636</s_sub_total_subtotal_price> <s_sub_total_tax_price>5.264</s_sub_total_tax_price> <s_total_total_price>57.900</s_total_total_price> <s_total_cashprice>60.000</s_total_cashprice> <s_total_changeprice>2.100</s_total_changeprice>"
+}

@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu_nm>CHEEZY DOG BITES</s_menu_nm> <s_menu_unitprice>33,000</s_menu_unitprice> <s_menu_cnt>1</s_menu_cnt> <s_menu_price>33,000</s_menu_price> <s_sub_total_subtotal_price>33,000</s_sub_total_subtotal_price> <s_total_total_price>33,000</s_total_total_price> <s_total_cashprice>100,000</s_total_cashprice> <s_total_changeprice>67,000</s_total_changeprice>"
+}

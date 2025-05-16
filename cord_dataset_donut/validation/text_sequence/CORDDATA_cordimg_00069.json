@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"SOTO MEDAN+NASI\", \"cnt\": \"1\", \"price\": \"59.500\"}, {\"nm\": \"GADO-GADO\", \"cnt\": \"1\", \"price\": \"34.500\"}, {\"nm\": \"SOTO BETAWI + NASI\", \"cnt\": \"1\", \"price\": \"57.500\"}]</s_menu> <s_sub_total_subtotal_price>151.500</s_sub_total_subtotal_price> <s_sub_total_service_price>7.575</s_sub_total_service_price> <s_sub_total_tax_price>15.908</s_sub_total_tax_price> <s_total_total_price>174.983</s_total_total_price>"
+}

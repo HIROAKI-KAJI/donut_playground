@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"FUTAMI 17 GREEN TEA (CLAS\", \"cnt\": \"1\", \"price\": \"12,500\"}, {\"nm\": \"EGG TART\", \"cnt\": \"1\", \"price\": \"13,000\"}, {\"nm\": \"GRAIN CROQUE MONSIEUR\", \"cnt\": \"1\", \"price\": \"17,000\"}]</s_menu> <s_total_total_price>42,500</s_total_total_price> <s_total_cashprice>50,000</s_total_cashprice> <s_total_changeprice>7,500</s_total_changeprice>"
+}

@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu_nm>LEMONADE22OZ</s_menu_nm> <s_menu_cnt>1</s_menu_cnt> <s_menu_price>26,000</s_menu_price> <s_menu_sub_price>26,000</s_menu_sub_price> <s_sub_total_subtotal_price>26,000</s_sub_total_subtotal_price> <s_total_total_price>26,000</s_total_total_price> <s_total_changeprice>0</s_total_changeprice> <s_total_emoneyprice>26,000</s_total_emoneyprice>"
+}

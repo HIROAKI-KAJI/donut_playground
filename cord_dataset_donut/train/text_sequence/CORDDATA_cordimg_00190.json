@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"SOONDUBU CHIGE\", \"cnt\": \"1\", \"price\": \"75,000\"}, {\"nm\": \"JAP CHAE\", \"cnt\": \"1\", \"price\": \"105,000\"}, {\"nm\": \"GOCHUJANG SAMGYEOPSAL\", \"cnt\": \"1\", \"price\": \"120,000\"}]</s_menu> <s_sub_total_subtotal_price>300,000</s_sub_total_subtotal_price> <s_sub_total_discount_price>0</s_sub_total_discount_price> <s_sub_total_service_price>21,000</s_sub_total_service_price> <s_sub_total_tax_price>30,000</s_sub_total_tax_price> <s_total_total_price>351,000</s_total_total_price> <s_total_changeprice>0</s_total_changeprice> <s_total_creditcardprice>351,000</s_total_creditcardprice>"
+}

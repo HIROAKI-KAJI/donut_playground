@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"SURIMI\", \"cnt\": \"1\", \"price\": \"29,091\"}, {\"nm\": \"CREAMY CHK CLS FTC\", \"cnt\": \"1\", \"price\": \"42,727\"}, {\"nm\": \"MIX 4FUN CHOCOLATE\", \"cnt\": \"1\", \"price\": \"19,091\"}, {\"nm\": \"GREEN ITSODA PITCHER\", \"cnt\": \"1\", \"price\": \"60,909\"}, {\"nm\": \"SC/R GRILLED STEAK\", \"cnt\": \"1\", \"price\": \"99,091\"}]</s_menu> <s_sub_total_subtotal_price>250,909</s_sub_total_subtotal_price> <s_sub_total_tax_price>25,091</s_sub_total_tax_price> <s_total_total_price>276,000</s_total_total_price>"
+}

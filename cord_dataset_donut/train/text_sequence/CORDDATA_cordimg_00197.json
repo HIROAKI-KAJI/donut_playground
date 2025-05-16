@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"CK.MANTAP A\", \"unitprice\": \"25,455\", \"cnt\": \"1\", \"price\": \"25,455\"}, {\"nm\": \"CHEESE B\", \"unitprice\": \"20,455\", \"cnt\": \"2\", \"price\": \"40,909\"}, {\"nm\": \"TAKE AWAY\", \"unitprice\": \"909\", \"cnt\": \"1\", \"price\": \"909\"}]</s_menu> <s_sub_total_subtotal_price>67,273</s_sub_total_subtotal_price> <s_sub_total_tax_price>6,727</s_sub_total_tax_price> <s_total_total_price>74,000</s_total_total_price> <s_total_cashprice>[\"74,000\", \"100,000\"]</s_total_cashprice> <s_total_changeprice>26,000</s_total_changeprice>"
+}

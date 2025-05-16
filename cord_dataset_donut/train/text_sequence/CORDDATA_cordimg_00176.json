@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"Spaghetti Bini Muda (Bol ognese) - DINE IN\", \"cnt\": \"1\", \"price\": \"19.000\"}, {\"nm\": \"French Fries - DINE IN\", \"cnt\": \"1\", \"price\": \"12.000\"}, {\"nm\": \"Mineral Water - DINE IN\", \"cnt\": \"1\", \"price\": \"7.000\"}]</s_menu> <s_total_total_price>38.000</s_total_total_price> <s_total_cashprice>50.000</s_total_cashprice> <s_total_changeprice>12.000</s_total_changeprice>"
+}

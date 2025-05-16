@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"SAUSAGE AND SALAMI\", \"cnt\": \"1\", \"price\": \"62,000\"}, {\"nm\": \"GREEN MONSIEUR\", \"cnt\": \"1\", \"price\": \"57,000\", \"sub\": {\"nm\": \"ADD 1 W. ORIGINAL\", \"cnt\": \"1\", \"price\": \"12,000\"}}]</s_menu> <s_sub_total_subtotal_price>131,000</s_sub_total_subtotal_price> <s_sub_total_service_price>7,860</s_sub_total_service_price> <s_sub_total_tax_price>13,886</s_sub_total_tax_price> <s_total_total_price>152,746</s_total_total_price>"
+}

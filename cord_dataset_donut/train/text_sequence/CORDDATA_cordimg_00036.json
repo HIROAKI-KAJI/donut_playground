@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"GONG GIBAB\", \"cnt\": \"1\", \"price\": \"20,000\"}, {\"nm\": \"BO SSAM\", \"cnt\": \"1\", \"price\": \"320,000\"}, {\"nm\": \"HAEMUL DENJANG JJIGAE\", \"cnt\": \"1\", \"price\": \"85,000\"}, {\"nm\": \"MULNAENGMYO N\", \"cnt\": \"1\", \"price\": \"85,000\"}]</s_menu> <s_sub_total_subtotal_price>510,000</s_sub_total_subtotal_price> <s_sub_total_discount_price>0</s_sub_total_discount_price> <s_sub_total_service_price>35,700</s_sub_total_service_price> <s_sub_total_tax_price>54,255</s_sub_total_tax_price> <s_total_total_price>599,955</s_total_total_price>"
+}

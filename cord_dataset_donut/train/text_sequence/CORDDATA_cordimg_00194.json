@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"BUDS CALMING TUMMY RUB CREAM 30ML(TOILETRIES)\", \"num\": \"BU350003\", \"price\": \"200,000\"}, {\"nm\": \"BUDS PRECIOUS NEWBORN CREAM 75ML(TOILETRIES)\", \"num\": \"BU350012\", \"price\": \"235,000\"}, {\"nm\": \"BUDS PRECIOUS NEWBORN HEAD TO TOE CLEANSER 250ML(TOILETRIES)\", \"num\": \"BU350009\", \"price\": \"270,000\"}]</s_menu> <s_total_total_price>705,000</s_total_total_price> <s_total_menuqty_cnt>3</s_total_menuqty_cnt>"
+}

@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"IKAN GABUS FRESH\", \"unitprice\": \"98,500\", \"cnt\": \"0.264X\", \"price\": \"26,004\"}, {\"nm\": \"IKAN BUMBU KUNING\", \"unitprice\": \"72,500\", \"cnt\": \"0.308X\", \"price\": \"22,330\"}, {\"nm\": \"OCTOPUS SATAY\", \"unitprice\": \"7,500\", \"cnt\": \"1X\", \"price\": \"7,500\"}]</s_menu> <s_sub_total_subtotal_price>55,834</s_sub_total_subtotal_price> <s_total_total_price>[\"55,834\", \"55,800\"]</s_total_total_price> <s_total_total_etc>34 -</s_total_total_etc> <s_total_cashprice>60,000</s_total_cashprice> <s_total_changeprice>4,200</s_total_changeprice> <s_total_menuqty_cnt>1.572</s_total_menuqty_cnt>"
+}

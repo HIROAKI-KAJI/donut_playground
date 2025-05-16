@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu_nm>PHO BO TAI</s_menu_nm> <s_menu_cnt>1</s_menu_cnt> <s_menu_price>55,000</s_menu_price> <s_sub_total_subtotal_price>55,000</s_sub_total_subtotal_price> <s_sub_total_tax_price>5,500</s_sub_total_tax_price> <s_total_total_price>60,500</s_total_total_price> <s_total_cashprice>[\"100,000\", \"100,000\"]</s_total_cashprice> <s_total_changeprice>39,500</s_total_changeprice>"
+}

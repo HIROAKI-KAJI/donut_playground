@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"Common Law\", \"cnt\": \"1\", \"price\": \"9,900\"}, {\"nm\": \"Tigger Roll\", \"cnt\": \"1\", \"price\": \"14,900\"}]</s_menu> <s_sub_total_subtotal_price>24,800</s_sub_total_subtotal_price> <s_sub_total_discount_price>-300</s_sub_total_discount_price> <s_total_cashprice>100,000</s_total_cashprice> <s_total_changeprice>75,500</s_total_changeprice> <s_total_menuqty_cnt>2</s_total_menuqty_cnt>"
+}

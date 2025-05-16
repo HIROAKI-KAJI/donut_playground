@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"KUPAT TAHU\", \"num\": \"0512100\", \"unitprice\": \"19,000\", \"cnt\": \"2\", \"price\": \"38,000\"}, {\"nm\": \"MIE KOCOK\", \"num\": \"0515103\", \"unitprice\": \"29,000\", \"cnt\": \"3\", \"price\": \"87,000\"}]</s_menu> <s_sub_total_subtotal_price>125,000</s_sub_total_subtotal_price> <s_sub_total_tax_price>12,500</s_sub_total_tax_price> <s_total_total_price>137,500</s_total_total_price> <s_total_cashprice>150,000</s_total_cashprice> <s_total_changeprice>12,500</s_total_changeprice>"
+}

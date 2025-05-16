@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"KOPI SUSU\", \"cnt\": \"1\", \"price\": \"17.500\", \"sub\": {\"nm\": \"+DINGIN\"}}, {\"nm\": \"KOPI SUSU\", \"cnt\": \"1\", \"price\": \"17.500\", \"sub\": {\"nm\": \"+DINGIN\"}}, {\"nm\": \"NASI GORENG\", \"cnt\": \"1\", \"price\": \"22.500\", \"sub\": {\"nm\": \"+SPESIAL\"}}, {\"nm\": \"BAKPIA KACANG H\", \"cnt\": \"1\", \"price\": \"4.000\"}]</s_menu> <s_sub_total_subtotal_price>61.500</s_sub_total_subtotal_price> <s_total_total_price>61.500</s_total_total_price> <s_total_cashprice>70.000</s_total_cashprice> <s_total_changeprice>8.500</s_total_changeprice>"
+}

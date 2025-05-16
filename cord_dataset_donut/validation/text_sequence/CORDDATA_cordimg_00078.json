@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"Mineral Water\", \"cnt\": \"2\", \"price\": \"18 000\"}, {\"nm\": \"Teh Tawar Dingin\", \"cnt\": \"1\", \"price\": \"11.000\"}, {\"nm\": \"Soto Betawi\", \"cnt\": \"2\", \"price\": \"116.000\"}, {\"nm\": \"NASI PUTIH\", \"cnt\": \"1\", \"price\": \"9.000\"}]</s_menu> <s_sub_total_subtotal_price>154 000</s_sub_total_subtotal_price> <s_sub_total_service_price>7 700</s_sub_total_service_price> <s_sub_total_tax_price>16 170</s_sub_total_tax_price> <s_total_total_price>177.870</s_total_total_price> <s_total_menuqty_cnt>6</s_total_menuqty_cnt>"
+}

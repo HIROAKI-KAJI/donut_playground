@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"BASO TAHU\", \"unitprice\": \"43,181\", \"cnt\": \"1\", \"price\": \"43,181\"}, {\"nm\": \"ES JERUK\", \"unitprice\": \"13.000\", \"cnt\": \"1\", \"price\": \"13,000\"}]</s_menu> <s_sub_total_subtotal_price>56,181</s_sub_total_subtotal_price> <s_sub_total_tax_price>5,618</s_sub_total_tax_price> <s_total_total_price>61,799</s_total_total_price> <s_total_cashprice>62,000</s_total_cashprice> <s_total_changeprice>201</s_total_changeprice>"
+}

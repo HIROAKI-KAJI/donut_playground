@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"BLUS WANITA\", \"num\": \"0571-1854\", \"unitprice\": \"@120,000\", \"cnt\": \"1\", \"discountprice\": \"0%\", \"itemsubtotal\": \"120,000\"}, {\"nm\": \"SHOPPING BAG\", \"num\": \"1002-0060\", \"unitprice\": \"@880\", \"cnt\": \"1\", \"discountprice\": \"100%\", \"itemsubtotal\": \"0\"}]</s_menu> <s_total_total_price>120,000</s_total_total_price> <s_total_changeprice>0</s_total_changeprice> <s_total_creditcardprice>120,000</s_total_creditcardprice> <s_total_menuqty_cnt>(2</s_total_menuqty_cnt>"
+}

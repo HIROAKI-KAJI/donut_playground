@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"Ayam Bakar\", \"cnt\": \"2\", \"price\": \"55.000\"}, {\"nm\": \"Nasi Putih\", \"cnt\": \"2\", \"price\": \"20.000\"}, {\"nm\": \"Nila Bakar/Goreng\", \"cnt\": \"1\", \"price\": \"27,500\"}, {\"nm\": \"Sop Gurame\", \"cnt\": \"1\", \"price\": \"87.000\"}, {\"nm\": \"Teh Poci\", \"cnt\": \"1\", \"price\": \"25.000\"}]</s_menu> <s_sub_total_subtotal_price>214.500</s_sub_total_subtotal_price> <s_sub_total_service_price>12.870</s_sub_total_service_price> <s_sub_total_tax_price>22.737</s_sub_total_tax_price> <s_total_total_price>250,107</s_total_total_price>"
+}

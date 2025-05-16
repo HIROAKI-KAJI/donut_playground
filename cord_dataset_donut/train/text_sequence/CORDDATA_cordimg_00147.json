@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu_nm>CHOCO ALMOND</s_menu_nm> <s_menu_cnt>1</s_menu_cnt> <s_menu_price>18,182</s_menu_price> <s_menu_sub_nm>*Gula Murni 100%</s_menu_sub_nm> <s_sub_total_subtotal_price>18,182</s_sub_total_subtotal_price> <s_sub_total_discount_price>-2,727</s_sub_total_discount_price> <s_sub_total_tax_price>1,546</s_sub_total_tax_price> <s_sub_total_etc>15,455</s_sub_total_etc> <s_total_total_price>17,001</s_total_total_price> <s_total_total_etc>-1</s_total_total_etc> <s_total_emoneyprice>17,000</s_total_emoneyprice> <s_total_menuqty_cnt>1</s_total_menuqty_cnt>"
+}

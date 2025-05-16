@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"NASI + AYAM KATSU TER...\", \"cnt\": \"1\", \"price\": \"31,819\"}, {\"nm\": \"TEH PANAS\", \"cnt\": \"1\", \"price\": \"5,455\"}, {\"nm\": \"ES TEH MANIS\", \"cnt\": \"1\", \"price\": \"7,273\"}, {\"nm\": \"CH CORDON BLEU NASI\", \"cnt\": \"1\", \"price\": \"42,728\"}]</s_menu> <s_sub_total_subtotal_price>87,275</s_sub_total_subtotal_price> <s_sub_total_tax_price>8,728</s_sub_total_tax_price> <s_sub_total_etc>-3</s_sub_total_etc> <s_total_total_price>96,000</s_total_total_price> <s_total_creditcardprice>96,000</s_total_creditcardprice> <s_total_menuqty_cnt>ITEMS :4</s_total_menuqty_cnt>"
+}

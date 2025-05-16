@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu_nm>MEGA</s_menu_nm> <s_menu_price>Rp 30,000</s_menu_price> <s_menu_sub>[{\"nm\": \"CUP MEGA\"}, {\"nm\": \"BBQ\"}]</s_menu_sub> <s_total_total_price>Rp 30,000</s_total_total_price> <s_total_cashprice>100,000</s_total_cashprice> <s_total_changeprice>Rp 70,000</s_total_changeprice>"
+}

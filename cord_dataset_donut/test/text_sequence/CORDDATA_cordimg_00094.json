@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"TAHU GORENG\", \"cnt\": \"1\", \"price\": \"28,000\"}, {\"nm\": \"CAKWE\", \"cnt\": \"1\", \"price\": \"17,000\"}, {\"nm\": \"PHO TAI CHIN(R)\", \"cnt\": \"1\", \"price\": \"63,000\"}, {\"nm\": \"TEA\", \"cnt\": \"1\", \"price\": \"11,000\"}]</s_menu> <s_sub_total_subtotal_price>119,000</s_sub_total_subtotal_price> <s_sub_total_service_price>8,330</s_sub_total_service_price> <s_sub_total_tax_price>12,733</s_sub_total_tax_price> <s_total_total_price>140,063</s_total_total_price> <s_total_creditcardprice>140,063</s_total_creditcardprice>"
+}

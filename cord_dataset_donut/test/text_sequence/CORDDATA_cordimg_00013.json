@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"BASO KUAH\", \"unitprice\": \"43.636\", \"cnt\": \"1\", \"price\": \"43.636\"}, {\"nm\": \"A.MINERAL GELAS\", \"unitprice\": \"3,000\", \"cnt\": \"1\", \"price\": \"3,000\"}]</s_menu> <s_sub_total_subtotal_price>[\"46.636\", \"46.636\"]</s_sub_total_subtotal_price> <s_sub_total_tax_price>4.664</s_sub_total_tax_price> <s_total_total_price>51.300</s_total_total_price> <s_total_cashprice>52.000</s_total_cashprice> <s_total_changeprice>700</s_total_changeprice>"
+}

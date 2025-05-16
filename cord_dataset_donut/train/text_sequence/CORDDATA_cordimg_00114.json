@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu_nm>Puyo 6 (Package)</s_menu_nm> <s_menu_unitprice>70,000</s_menu_unitprice> <s_menu_cnt>1x</s_menu_cnt> <s_menu_price>70,000</s_menu_price> <s_menu_sub>[{\"nm\": \"Si1ky Lychee\", \"cnt\": \"2x\"}, {\"nm\": \"Si1ky Mango\", \"cnt\": \"1x\"}, {\"nm\": \"Si1ky Cotton Candy\", \"cnt\": \"1x\"}, {\"nm\": \"Si1ky Green Tea\", \"cnt\": \"1x\"}, {\"nm\": \"Si1ky Chocolate\", \"cnt\": \"1x\"}]</s_menu_sub> <s_sub_total_subtotal_price>70,000</s_sub_total_subtotal_price> <s_total_total_price>70,000</s_total_total_price> <s_total_changeprice>0</s_total_changeprice> <s_total_creditcardprice>70,000</s_total_creditcardprice>"
+}

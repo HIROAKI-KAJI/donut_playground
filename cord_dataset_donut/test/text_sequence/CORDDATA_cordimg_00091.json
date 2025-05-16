@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"BAKSO BNGKS\", \"cnt\": \"1\", \"price\": \"15.000\"}, {\"nm\": \"GORENGAN\", \"cnt\": \"6\", \"price\": \"6.000\"}]</s_menu> <s_total_total_price>21.000</s_total_total_price> <s_total_cashprice>30.000</s_total_cashprice> <s_total_changeprice>9.000</s_total_changeprice>"
+}

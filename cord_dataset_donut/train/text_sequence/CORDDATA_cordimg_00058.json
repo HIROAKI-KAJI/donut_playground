@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"ROTI KEJU COKLAT\", \"num\": \"1069-\", \"unitprice\": \"8.500,00\", \"cnt\": \"x1\", \"price\": \"8.500,00\"}, {\"nm\": \"ROTI MAHKOTA/RING\", \"num\": \"1037-\", \"unitprice\": \"10.500,00\", \"cnt\": \"x1\", \"price\": \"10.500,00\"}, {\"nm\": \"ROTI KACANG MERAH\", \"num\": \"1022-\", \"unitprice\": \"8.000,00\", \"cnt\": \"x1\", \"price\": \"8.000,00\"}, {\"nm\": \"ROTI COKLAT\", \"num\": \"1001-\", \"unitprice\": \"8.000,00\", \"cnt\": \"x1\", \"price\": \"8.000,00\"}]</s_menu> <s_total_total_price>35.000,00</s_total_total_price> <s_total_cashprice>50.000,00</s_total_cashprice> <s_total_changeprice>15.000,00</s_total_changeprice> <s_total_menuqty_cnt>4</s_total_menuqty_cnt>"
+}

@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"GRILLED BABY POTATO (R\", \"cnt\": \"1\", \"price\": \"50,500\"}, {\"nm\": \"TRUFFLE CREAM\", \"cnt\": \"1\", \"price\": \"76,000\"}, {\"nm\": \"CARBONARA\", \"cnt\": \"1\", \"price\": \"70,500\"}, {\"nm\": \"ORIGINAL BREWED TEA\", \"cnt\": \"2\", \"price\": \"46,000\"}]</s_menu> <s_sub_total_subtotal_price>243,000</s_sub_total_subtotal_price> <s_sub_total_service_price>14,580</s_sub_total_service_price> <s_sub_total_tax_price>25,758</s_sub_total_tax_price> <s_total_total_price>283,338</s_total_total_price> <s_total_creditcardprice>[\"283,338\", \"5962\"]</s_total_creditcardprice>"
+}

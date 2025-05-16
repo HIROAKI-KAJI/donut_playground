@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"ZAI.Milk Choco Egg Avenger60gr\", \"unitprice\": \"53,636.00\", \"cnt\": \"1\", \"price\": \"53,636.00\"}, {\"nm\": \"ZAI.Milk Choco Egg Frozen 60gr\", \"unitprice\": \"53,636.00\", \"cnt\": \"1\", \"price\": \"53,636.00\"}]</s_menu> <s_sub_total_subtotal_price>107,272.00</s_sub_total_subtotal_price> <s_sub_total_discount_price>0.00</s_sub_total_discount_price> <s_sub_total_tax_price>10,727.00</s_sub_total_tax_price> <s_total_total_price>117,999.00</s_total_total_price> <s_total_changeprice>0.00</s_total_changeprice> <s_total_creditcardprice>117,999.00</s_total_creditcardprice>"
+}

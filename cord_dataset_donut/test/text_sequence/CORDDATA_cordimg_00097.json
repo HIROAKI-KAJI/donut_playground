@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"BUBUR GO\", \"unitprice\": \"20.000\", \"cnt\": \"2\", \"price\": \"40.000\"}, {\"nm\": \"PUYUH GO\", \"price\": \"6.000\"}, {\"nm\": \"SATE ATI GO\", \"unitprice\": \"3.000\", \"cnt\": \"3\", \"price\": \"9.000\"}]</s_menu> <s_total_total_price>55.000</s_total_total_price> <s_total_cashprice>55.000</s_total_cashprice> <s_total_menuqty_cnt>6.00xITEMS</s_total_menuqty_cnt>"
+}

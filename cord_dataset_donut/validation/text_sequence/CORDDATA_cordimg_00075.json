@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"KFC Winger HC\", \"cnt\": \"2\", \"price\": \"40,000\"}, {\"nm\": \"Ori Bento\", \"cnt\": \"1\", \"price\": \"13,636\"}, {\"nm\": \"Mango Float\", \"cnt\": \"1\", \"price\": \"5,909\"}, {\"nm\": \"F.Wngr GES-HC\", \"cnt\": \"1\", \"price\": \"0\"}, {\"nm\": \"CHARGE TA\", \"cnt\": \"1\", \"price\": \"909\"}]</s_menu> <s_sub_total_subtotal_price>60,454</s_sub_total_subtotal_price> <s_sub_total_tax_price>6,046</s_sub_total_tax_price> <s_total_total_price>66,500</s_total_total_price> <s_total_cashprice>100,000</s_total_cashprice> <s_total_changeprice>33,500</s_total_changeprice> <s_total_menuqty_cnt>6</s_total_menuqty_cnt>"
+}

@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"RISOL ROGUT\", \"unitprice\": \"@9,000\", \"cnt\": \"2X\", \"discountprice\": \"-5,400\", \"price\": \"18,000\"}, {\"nm\": \"MIKA KCL\", \"price\": \"0\"}, {\"nm\": \"PLASTIK 25\", \"price\": \"0\"}]</s_menu> <s_sub_total_subtotal_price>12,600</s_sub_total_subtotal_price> <s_total_total_price>12,600</s_total_total_price> <s_total_cashprice>100,700</s_total_cashprice> <s_total_changeprice>88,100</s_total_changeprice>"
+}

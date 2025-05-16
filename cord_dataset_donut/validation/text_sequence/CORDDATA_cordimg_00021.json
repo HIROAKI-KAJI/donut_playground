@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"Mango Lemon Tea\", \"cnt\": \"1\", \"price\": \"Rp 29,090\"}, {\"nm\": \"Sliders Set\", \"cnt\": \"1\", \"price\": \"Rp 113,636\"}, {\"nm\": \"Chicken Vege Rice Bowl\", \"cnt\": \"1\", \"price\": \"Rp 86,363\"}, {\"nm\": \"Discount BCA 15%\", \"cnt\": \"1\", \"price\": \"-Rp 34,363\"}]</s_menu> <s_sub_total_subtotal_price>Rp 194,726</s_sub_total_subtotal_price> <s_sub_total_service_price>Rp 9,736</s_sub_total_service_price> <s_sub_total_tax_price>Rp 20,446</s_sub_total_tax_price> <s_total_total_price>Rp 224,908</s_total_total_price> <s_total_creditcardprice>Rp 224,908</s_total_creditcardprice>"
+}

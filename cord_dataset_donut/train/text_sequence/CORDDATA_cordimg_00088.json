@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"KUE PILUS ASIN\", \"unitprice\": \"210.00 x\", \"cnt\": \"80\", \"price\": \"16,800\"}, {\"nm\": \"KACANG MEDAN\", \"unitprice\": \"302.00 x\", \"cnt\": \"95\", \"price\": \"28,690\"}]</s_menu> <s_sub_total_subtotal_price>45,490</s_sub_total_subtotal_price> <s_sub_total_discount_price>[\"0\", \"0\"]</s_sub_total_discount_price> <s_sub_total_tax_price>4,549</s_sub_total_tax_price> <s_total_total_price>50,039</s_total_total_price> <s_total_changeprice>0</s_total_changeprice> <s_total_creditcardprice>50,039</s_total_creditcardprice>"
+}

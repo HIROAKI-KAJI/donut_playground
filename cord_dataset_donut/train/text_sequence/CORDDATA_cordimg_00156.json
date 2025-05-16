@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"BOLU KUKUS PX\", \"unitprice\": \"@13000\", \"cnt\": \"3X\", \"discountprice\": \"-11,700\", \"price\": \"39,000\"}, {\"nm\": \"PLASTIK SEDANG\", \"unitprice\": \"@0\", \"cnt\": \"1X\", \"price\": \"0\"}]</s_menu> <s_sub_total_subtotal_price>27,300</s_sub_total_subtotal_price> <s_total_total_price>27,300</s_total_total_price> <s_total_cashprice>50,000</s_total_cashprice> <s_total_changeprice>22,700</s_total_changeprice> <s_total_menuqty_cnt>4.00xITEMs</s_total_menuqty_cnt>"
+}

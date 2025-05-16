@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"CHOCO PUFF\", \"cnt\": \"1\", \"price\": \"29,091\"}, {\"nm\": \"CREAMY BEEF CLS FTC\", \"cnt\": \"1\", \"price\": \"42,727\"}, {\"nm\": \"NEW ORIENTAL CHK RICE\", \"cnt\": \"1\", \"price\": \"34,545\"}, {\"nm\": \"LIPTON PITCHER\", \"cnt\": \"1\", \"price\": \"54,545\"}, {\"nm\": \"SC/P SUPER SUPREME\", \"cnt\": \"1\", \"price\": \"47,273\"}, {\"nm\": \"CB/P BLACK PEPP BEEF\", \"cnt\": \"1\", \"price\": \"48,182\"}]</s_menu> <s_sub_total_subtotal_price>256,363</s_sub_total_subtotal_price> <s_sub_total_tax_price>25,637</s_sub_total_tax_price> <s_total_total_price>282,000</s_total_total_price>"
+}

@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"WALL'S FEAST CKLT.65\", \"unitprice\": \"5400\", \"cnt\": \"1\", \"price\": \"5,400\"}, {\"nm\": \"CMPN TROPICANA.CHO75\", \"unitprice\": \"5500\", \"cnt\": \"1\", \"price\": \"5,500\"}, {\"nm\": \"MAGNUM WHT ALMND 80\", \"unitprice\": \"15000\", \"cnt\": \"1\", \"price\": \"15,000\"}]</s_menu> <s_sub_total_subtotal_price>25,900</s_sub_total_subtotal_price> <s_sub_total_tax_price>2,355</s_sub_total_tax_price> <s_total_total_price>25,900</s_total_total_price> <s_total_cashprice>25,900</s_total_cashprice>"
+}

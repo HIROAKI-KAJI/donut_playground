@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"PAIN AU CHOCOLATE\", \"cnt\": \"1\", \"price\": \"11,000\"}, {\"nm\": \"CHOCO CUSTARD PASTRY\", \"cnt\": \"1\", \"price\": \"12,000\"}, {\"nm\": \"MILK PASTRY ROLL\", \"cnt\": \"1\", \"price\": \"9,000\"}, {\"nm\": \"REAL CHEESE INSIDE BREAD\", \"cnt\": \"1\", \"price\": \"13,500\"}, {\"nm\": \"SAUSAGE BREAD\", \"cnt\": \"1\", \"price\": \"15,000\"}, {\"nm\": \"HAM CHEESE FLAT BREAD\", \"cnt\": \"1\", \"price\": \"20,000\"}]</s_menu> <s_total_total_price>80,500</s_total_total_price> <s_total_cashprice>100,000</s_total_cashprice> <s_total_changeprice>19,500</s_total_changeprice>"
+}

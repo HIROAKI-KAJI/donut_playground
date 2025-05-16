@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"S-Bubble Milk Tea\", \"unitprice\": \"@20,000\", \"cnt\": \"1X\", \"price\": \"20,000\", \"sub\": {\"nm\": \"100%\"}}, {\"nm\": \"S-Caramel Milk Tea\", \"unitprice\": \"@20,000\", \"cnt\": \"1X\", \"price\": \"20,000\", \"sub\": {\"nm\": \"100%\"}}]</s_menu> <s_total_total_price>40,000</s_total_total_price> <s_total_cashprice>40,000</s_total_cashprice> <s_total_changeprice>0</s_total_changeprice>"
+}

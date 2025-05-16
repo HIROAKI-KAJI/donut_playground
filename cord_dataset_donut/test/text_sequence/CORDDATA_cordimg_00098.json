@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"BLACK PAPPER MEATBALL PAS\", \"cnt\": \"1\", \"price\": \"79,000\"}, {\"nm\": \"TRUFFLE CREAM\", \"cnt\": \"1\", \"price\": \"77,000\"}, {\"nm\": \"EARL GREY MILK TEA\", \"cnt\": \"1\", \"price\": \"59,000\"}]</s_menu> <s_sub_total_subtotal_price>215,000</s_sub_total_subtotal_price> <s_sub_total_service_price>12,900</s_sub_total_service_price> <s_sub_total_tax_price>22,790</s_sub_total_tax_price> <s_total_total_price>250,690</s_total_total_price>"
+}

@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"PL. MUFFIN BLUEBERRY\", \"cnt\": \"1\", \"price\": \"14,000\"}, {\"nm\": \"RB. ABON AYAM\", \"cnt\": \"1\", \"price\": \"9,000\"}, {\"nm\": \"RB. COKLAT COFFEE\", \"cnt\": \"1\", \"price\": \"8,000\"}, {\"nm\": \"RB. RED BEAN\", \"cnt\": \"1\", \"price\": \"8,000\"}]</s_menu> <s_sub_total_subtotal_price>39,000</s_sub_total_subtotal_price> <s_total_total_price>39,000</s_total_total_price> <s_total_cashprice>39,000</s_total_cashprice> <s_total_menutype_cnt>4</s_total_menutype_cnt> <s_total_menuqty_cnt>4</s_total_menuqty_cnt>"
+}

@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"Viet Milk Coffee\", \"cnt\": \"1\", \"price\": \"29.000\", \"sub\": [{\"nm\": \"+L\"}, {\"nm\": \"+Ice\"}]}, {\"nm\": \"Viet Milk Coffee\", \"cnt\": \"1\", \"price\": \"25.000\", \"sub\": [{\"nm\": \"+lce\"}, {\"nm\": \"+M\"}]}]</s_menu> <s_sub_total_subtotal_price>54.000</s_sub_total_subtotal_price> <s_total_total_price>54.000</s_total_total_price> <s_total_cashprice>56.000</s_total_cashprice> <s_total_changeprice>2.000</s_total_changeprice>"
+}

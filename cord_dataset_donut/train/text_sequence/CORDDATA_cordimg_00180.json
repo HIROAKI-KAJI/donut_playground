@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"CHOCO CHIP\", \"unitprice\": \"13,000\", \"cnt\": \"2 X\", \"price\": \"26,000\"}, {\"nm\": \"CHOCO BANANA\", \"unitprice\": \"14,000\", \"cnt\": \"3 X\", \"price\": \"42,000\"}, {\"nm\": \"CRISPY CHOCO\", \"price\": \"14,000\"}, {\"nm\": \"CRISPY CHOCO\", \"price\": \"14,000\"}, {\"nm\": \"CHOCBAN CUP\", \"unitprice\": \"12,000\", \"cnt\": \"3 X\", \"price\": \"36,000\"}, {\"nm\": \"RED VELVET\", \"unitprice\": \"16,000\", \"cnt\": \"2X\", \"price\": \"32,000\"}]</s_menu> <s_sub_total_subtotal_price>164,000</s_sub_total_subtotal_price> <s_sub_total_discount_price>16,400</s_sub_total_discount_price> <s_total_total_price>147,600</s_total_total_price> <s_total_creditcardprice>147,600</s_total_creditcardprice>"
+}

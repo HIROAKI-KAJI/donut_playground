@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"MINERAL 600 ML\", \"cnt\": \"1\", \"price\": \"7,727\"}, {\"nm\": \"BULGOGI RICE R\", \"cnt\": \"1\", \"price\": \"33,636\"}]</s_menu> <s_sub_total_subtotal_price>41,364</s_sub_total_subtotal_price> <s_sub_total_tax_price>4,136</s_sub_total_tax_price> <s_total_total_price>45,500</s_total_total_price> <s_total_cashprice>50,000</s_total_cashprice> <s_total_changeprice>-4,500</s_total_changeprice>"
+}

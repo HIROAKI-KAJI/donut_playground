@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"SEAFOOD MARINARA\", \"cnt\": \"1\", \"price\": \"85,000\"}, {\"nm\": \"CREAMY MARINARA SALMON\", \"cnt\": \"1\", \"price\": \"85.500\"}, {\"nm\": \"LYCHEE ICE TEA\", \"cnt\": \"2\", \"price\": \"77,000\"}]</s_menu> <s_sub_total_subtotal_price>247,500</s_sub_total_subtotal_price> <s_sub_total_service_price>14,850</s_sub_total_service_price> <s_sub_total_tax_price>26,235</s_sub_total_tax_price> <s_total_total_price>288,585</s_total_total_price>"
+}

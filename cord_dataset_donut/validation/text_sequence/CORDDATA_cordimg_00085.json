@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu_nm>Peanut & Cheese</s_menu_nm> <s_menu_cnt>1</s_menu_cnt> <s_menu_price>13,636</s_menu_price> <s_sub_total_subtotal_price>13,636</s_sub_total_subtotal_price> <s_sub_total_tax_price>1,364</s_sub_total_tax_price> <s_total_total_price>15,000</s_total_total_price> <s_total_cashprice>20,000</s_total_cashprice> <s_total_changeprice>5,000</s_total_changeprice>"
+}

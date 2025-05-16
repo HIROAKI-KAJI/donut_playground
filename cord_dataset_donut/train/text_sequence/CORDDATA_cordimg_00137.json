@@ -1,0 +1,3 @@
+{
+  "ground_truth": "<s_menu>[{\"nm\": \"FA-Cookies Mix 200 gr\", \"unitprice\": \"80,000.00\", \"cnt\": \"1\", \"price\": \"80,000.00\"}, {\"nm\": \"FA-Polycello Bag 200 gr\", \"unitprice\": \"0.00\", \"cnt\": \"1\", \"price\": \"0.00\"}]</s_menu> <s_sub_total_subtotal_price>80,000.00</s_sub_total_subtotal_price> <s_sub_total_discount_price>0.00</s_sub_total_discount_price> <s_sub_total_tax_price>8,000.00</s_sub_total_tax_price> <s_total_total_price>88,000.00</s_total_total_price> <s_total_changeprice>0.00</s_total_changeprice> <s_total_creditcardprice>88,000.00</s_total_creditcardprice>"
+}

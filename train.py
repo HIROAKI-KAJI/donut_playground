@@ -1,176 +1,247 @@
-"""
-Donut
-Copyright (c) 2022-present NAVER Corp.
-MIT License
-"""
-import argparse
-import datetime
-import json
-import os
-import random
-from io import BytesIO
-from os.path import basename
+import re
+from typing_extensions import cast, override
+
+
+from datetime import datetime
 from pathlib import Path
+from typing import cast
 
-import numpy as np
-import pytorch_lightning as pl
-import torch
-from pytorch_lightning.callbacks import LearningRateMonitor, ModelCheckpoint
-from pytorch_lightning.loggers.tensorboard import TensorBoardLogger
-from pytorch_lightning.plugins import CheckpointIO
-from pytorch_lightning.utilities import rank_zero_only
-from sconf import Config
+from pytorch_lightning import Trainer
+from pytorch_lightning.callbacks import ModelCheckpoint
+from torch.utils.data import DataLoader
+from transformers import (
+    DonutProcessor,
+    VisionEncoderDecoderConfig,
+    VisionEncoderDecoderModel,
+)
 
-from donut import DonutDataset
-from lightning_module import DonutDataPLModule, DonutModelPLModule
-
-
-class CustomCheckpointIO(CheckpointIO):
-    def save_checkpoint(self, checkpoint, path, storage_options=None):
-        del checkpoint["state_dict"]
-        torch.save(checkpoint, path)
-
-    def load_checkpoint(self, path, storage_options=None):
-        checkpoint = torch.load(path + "artifacts.ckpt")
-        state_dict = torch.load(path + "pytorch_model.bin")
-        checkpoint["state_dict"] = {"model." + key: value for key, value in state_dict.items()}
-        return checkpoint
-
-    def remove_checkpoint(self, path) -> None:
-        return super().remove_checkpoint(path)
+from nltk import edit_distance
+from pytorch_lightning import LightningModule
+from torch import FloatTensor, LongTensor, Tensor, optim
+from transformers import (
+    DonutProcessor,
+    LogitsProcessorList,
+    PreTrainedModel,
+    RepetitionPenaltyLogitsProcessor,
+    VisionEncoderDecoderModel,
+    LogitsProcessor,
+    XLMRobertaTokenizer,
+)
 
 
-@rank_zero_only
-def save_config_file(config, path):
-    if not Path(path).exists():
-        os.makedirs(path)
-    save_path = Path(path) / "config.yaml"
-    print(config.dumps())
-    with open(save_path, "w") as f:
-        f.write(config.dumps(modified_color=None, quote_str=True))
-        print(f"Config is saved at {save_path}")
 
+from src.domain.dataset import Dataset
+from src.domain.model import Model
 
-class ProgressBar(pl.callbacks.TQDMProgressBar):
-    def __init__(self, config):
+from src.domain.receiptItem import ReceiptItem
+
+class Model(LightningModule):
+    def __init__(
+        self,
+        processor: DonutProcessor,
+        model: VisionEncoderDecoderModel,
+        lr: float | None = None,
+        epochs: int | None = None,
+    ) -> None:
         super().__init__()
-        self.enable = True
-        self.config = config
+        self.processor = processor
+        self.tokenizer = cast(XLMRobertaTokenizer, processor.tokenizer)
 
-    def disable(self):
-        self.enable = False
+        bos_token_id, eos_token_id = cast(
+            list[int],
+            self.tokenizer.convert_tokens_to_ids(
+                ["<s>", "</s>"],
+            ),
+        )
+        model.config.pad_token_id = self.tokenizer.pad_token_id
+        model.config.decoder_start_token_id = bos_token_id
+        model.config.eos_token_id = eos_token_id
+        model.config.decoder.max_length = 1000
+        newly_added_num = self.tokenizer.add_special_tokens(
+            {
+                "additional_special_tokens": [
+                    tags
+                    for tags in ReceiptItem.get_xml_tags()
+                    if tags not in self.tokenizer.all_special_tokens
+                ],
+            },
+        )
 
-    def get_metrics(self, trainer, model):
-        items = super().get_metrics(trainer, model)
-        items.pop("v_num", None)
-        items["exp_name"] = f"{self.config.get('exp_name', '')}"
-        items["exp_version"] = f"{self.config.get('exp_version', '')}"
-        return items
+        if newly_added_num > 0:
+            cast(PreTrainedModel, model.decoder).resize_token_embeddings(len(self.tokenizer))
+
+        self.model = model
+        self._lr = lr
+        self._epochs = epochs
+        self.training_step_losses = []
+        self.validation_step_losses = []
+        self.validation_step_scores = []
+
+    @property
+    def lr(self) -> float:
+        if self._lr is None:
+            msg = "Learning rate is not set."
+            raise ValueError(msg)
+        return self._lr
+
+    @property
+    def epochs(self) -> int:
+        if self._epochs is None:
+            msg = "Epochs is not set."
+            raise ValueError(msg)
+        return self._epochs
+
+    def configure_optimizers(self) -> optim.Optimizer:
+        return optim.Adam(self.parameters(), lr=self.lr)
 
 
-def set_seed(seed):
-    pytorch_lightning_version = int(pl.__version__[0])
-    if pytorch_lightning_version < 2:
-        pl.utilities.seed.seed_everything(seed, workers=True)
-    else:
-        import lightning_fabric
-        lightning_fabric.utilities.seed.seed_everything(seed, workers=True)
+    def training_step(
+        self,
+        batch: tuple[Tensor, Tensor, list[str]],
+        _batch_idx: int,
+    ) -> Tensor:
+        pixel_values, labels, _ = batch
 
+        outputs = self.model(pixel_values, labels=labels[:, 1:])
+        loss = cast(Tensor, outputs.loss)
 
-def train(config):
-    set_seed(config.get("seed", 42))
+        self.training_step_losses.append(loss.item())
 
-    model_module = DonutModelPLModule(config)
-    data_module = DonutDataPLModule(config)
+        return loss
 
-    # add datasets to data_module
-    datasets = {"train": [], "validation": []}
-    for i, dataset_name_or_path in enumerate(config.dataset_name_or_paths):
-        task_name = os.path.basename(dataset_name_or_path)  # e.g., cord-v2, docvqa, rvlcdip, ...
-        
-        # add categorical special tokens (optional)
-        if task_name == "rvlcdip":
-            model_module.model.decoder.add_special_tokens([
-                "<advertisement/>", "<budget/>", "<email/>", "<file_folder/>", 
-                "<form/>", "<handwritten/>", "<invoice/>", "<letter/>", 
-                "<memo/>", "<news_article/>", "<presentation/>", "<questionnaire/>", 
-                "<resume/>", "<scientific_publication/>", "<scientific_report/>", "<specification/>"
-            ])
-        if task_name == "docvqa":
-            model_module.model.decoder.add_special_tokens(["<yes/>", "<no/>"])
-            
-        for split in ["train", "validation"]:
-            datasets[split].append(
-                DonutDataset(
-                    dataset_name_or_path=dataset_name_or_path,
-                    donut_model=model_module.model,
-                    max_length=config.max_length,
-                    split=split,
-                    task_start_token=config.task_start_tokens[i]
-                    if config.get("task_start_tokens", None)
-                    else f"<s_{task_name}>",
-                    prompt_end_token="<s_answer>" if "docvqa" in dataset_name_or_path else f"<s_{task_name}>",
-                    sort_json_key=config.sort_json_key,
-                )
+    def validation_step(
+        self,
+        batch: tuple[Tensor, Tensor, list[str]],
+        _batch_idx: int,
+    ) -> Tensor:
+        pixel_values, labels, targets = batch
+        outputs = self.model(pixel_values, labels=labels)
+        loss = cast(Tensor, outputs.loss)
+
+        self.validation_step_losses.append(loss.item())
+
+        predictions = self.inference(pixel_values)
+
+        scores = []
+
+        for pred, answer in zip(predictions, targets, strict=True):
+            score = edit_distance(pred, answer) / max(len(pred), len(answer))
+            scores.append(score)
+
+            self.print(f"Prediction: {pred}")
+            self.print(f"    Answer: {answer}")
+            self.print(f" Normed ED: {score}")
+
+        average_score = sum(scores) / len(scores)
+        self.validation_step_scores.append(average_score)
+
+        self.log(
+            "val_edit_distance",
+            average_score,
+            on_step=True,
+            on_epoch=True,
+            prog_bar=True,
+            logger=True,
+        )
+
+        return loss
+
+    def inference(self, pixel_values: Tensor) -> list[str]:
+        outputs = self.model.generate(
+            pixel_values,
+            max_length=self.model.config.decoder.max_length,
+            pad_token_id=self.model.config.pad_token_id,
+            eos_token_id=self.model.config.eos_token_id,
+            use_cache=True,
+            num_beams=1,
+            bad_words_ids=[[self.tokenizer.unk_token_id]],
+            return_dict_in_generate=True,
+            logits_processor=LogitsProcessorList(
+                [InferenceLogitsProcessor(self.tokenizer), RepetitionPenaltyLogitsProcessor(1.06)],
+            ),
+        )
+
+        pattern = re.compile(r"(<s_[a-zA-Z0-9_]+>)\s")
+
+        predictions = []
+        for seq in self.tokenizer.batch_decode(outputs.sequences):
+            seq_ = seq.replace(
+                self.tokenizer.pad_token,
+                "",
             )
-            # prompt_end_token is used for ignoring a given prompt in a loss function
-            # for docvqa task, i.e., {"question": {used as a prompt}, "answer": {prediction target}},
-            # set prompt_end_token to "<s_answer>"
-    data_module.train_datasets = datasets["train"]
-    data_module.val_datasets = datasets["validation"]
+            seq_ = re.sub(pattern, r"\1", seq_)
+            predictions.append(seq_)
 
-    logger = TensorBoardLogger(
-        save_dir=config.result_path,
-        name=config.exp_name,
-        version=config.exp_version,
-        default_hp_metric=False,
+        return predictions
+  
+BASE_MODEL = "naver-clova-ix/donut-base"
+IMAGE_SIZE = (1280, 960)
+TRAIN_PATH = Path("dataset/cord/train")
+VALIDATION_PATH = Path("dataset/cord/validation")
+
+import os
+
+def train() -> None:
+    print(os.getcwd())
+    batch_size = 1
+    lr = 1e-6
+    epoch_num = 3
+    model_output_path = Path(
+        f"model_output/donut_{batch_size}_{lr}_{round(datetime.now().timestamp())}",
     )
 
-    lr_callback = LearningRateMonitor(logging_interval="step")
+    config = VisionEncoderDecoderConfig.from_pretrained(BASE_MODEL)
+    base_model = cast(
+        VisionEncoderDecoderModel,
+        VisionEncoderDecoderModel.from_pretrained(
+            BASE_MODEL,
+            config=config,
+        ),
+    )
+    processor = cast(DonutProcessor, DonutProcessor.from_pretrained(BASE_MODEL))
+    model = Model(processor, base_model, lr, epoch_num)
 
-    checkpoint_callback = ModelCheckpoint(
-        monitor="val_metric",
-        dirpath=Path(config.result_path) / config.exp_name / config.exp_version,
-        filename="artifacts",
-        save_top_k=1,
-        save_last=False,
-        mode="min",
+    training_dataset = Dataset.load(TRAIN_PATH, model, training=True)
+
+    validation_dataset = Dataset.load(VALIDATION_PATH, model, training=False)
+
+    train_dataloader = DataLoader(
+        training_dataset,
+        batch_size=batch_size,
+        shuffle=True,
+        num_workers=16,
     )
 
-    bar = ProgressBar(config)
+    val_dataloader = DataLoader(
+        validation_dataset,
+        batch_size=batch_size,
+        shuffle=False,
+        num_workers=16,
+    )
 
-    custom_ckpt = CustomCheckpointIO()
-    trainer = pl.Trainer(
-        num_nodes=config.get("num_nodes", 1),
-        devices=torch.cuda.device_count(),
-        strategy="ddp",
+    trainer = Trainer(
         accelerator="gpu",
-        plugins=custom_ckpt,
-        max_epochs=config.max_epochs,
-        max_steps=config.max_steps,
-        val_check_interval=config.val_check_interval,
-        check_val_every_n_epoch=config.check_val_every_n_epoch,
-        gradient_clip_val=config.gradient_clip_val,
-        precision=16,
+        devices=1,
+        max_epochs=epoch_num,
+        check_val_every_n_epoch=1,
+        gradient_clip_val=1.0,
+        precision="16-mixed",
         num_sanity_val_steps=0,
-        logger=logger,
-        callbacks=[lr_callback, checkpoint_callback, bar],
+        callbacks=[
+            ModelCheckpoint(
+                dirpath=model_output_path,
+                filename="every_{epoch}_{v_num}",
+                every_n_epochs=1,
+                save_top_k=-1,
+            ),
+        ],
     )
 
-    trainer.fit(model_module, data_module, ckpt_path=config.get("resume_from_checkpoint_path", None))
+    trainer.fit(model, train_dataloader, val_dataloader)
+
+    model.model.save_pretrained(model_output_path)
+    model.processor.save_pretrained(model_output_path)
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--config", type=str, required=True)
-    parser.add_argument("--exp_version", type=str, required=False)
-    args, left_argv = parser.parse_known_args()
-
-    config = Config(args.config)
-    config.argv_update(left_argv)
-
-    config.exp_name = basename(args.config).split(".")[0]
-    config.exp_version = datetime.datetime.now().strftime("%Y%m%d_%H%M%S") if not args.exp_version else args.exp_version
-
-    save_config_file(config, Path(config.result_path) / config.exp_name / config.exp_version)
-    train(config)
+    train()
